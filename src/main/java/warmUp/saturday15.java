@@ -25,6 +25,7 @@ public class saturday15 {
 
     public static void main(String[] args) {
         Random random=new Random();
+        StringBuilder print=new StringBuilder();
         // Declaring  ///////////////////////////////////
         final int length=5;
         int[] array1=new int[length];
@@ -37,16 +38,17 @@ public class saturday15 {
         array3=combine(array1,array2);
         // PRINTING OUT ///////////////////
         for(int i=0;i<length;i++){
-            System.out.print(array1[i]+"  ");
+            print.append(array1[i]+"  ");
         }
-        System.out.println();
+        print.append("\n");
         for(int i=0;i<length;i++){
-            System.out.print(array2[i]+"  ");
+            print.append(array2[i]+"  ");
         }
-        System.out.println();
+        print.append("\n");
         for(int i:array3){
-            System.out.print(i+" ");
+            print.append(i+" ");
         }
         ///////////////////////////////
+        System.out.println(print);
     }
 }
