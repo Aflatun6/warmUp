@@ -25,14 +25,16 @@ public class saturday15 {
 
     public static void main(String[] args) {
         Random random=new Random();
+        // Declaring  ///////////////////////////////////
         final int length=5;
         int[] array1=new int[length];
         int[] array2=new int[length];
         int[] array3=new int[length*2];
+        // Filling         //////////////////////////////////////////////////////
         array1=fill(array1);
         array2=fill(array2);
+        // COmbining //////////////////////////////////
         array3=combine(array1,array2);
-
         // PRINTING OUT ///////////////////
         for(int i=0;i<length;i++){
             System.out.print(array1[i]+"  ");
