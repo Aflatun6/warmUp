@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="warmUp" />
         <module name="warmUpAfo's" />
+        <module name="warmUp11" />
       </profile>
     </annotationProcessing>
   </component>
