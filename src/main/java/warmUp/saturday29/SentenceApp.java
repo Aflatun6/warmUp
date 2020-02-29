@@ -25,7 +25,7 @@ public class SentenceApp {
 
     public static List<String> allPossible(List<String> subjects, List<String> verbs, List<String> objects) {
         StringBuilder print = new StringBuilder();
-        List<String> sentences = MakeItBro.make();
+        List<String> sentences = new ArrayList<>();
 
         for (String s : subjects) {
             for (String v : verbs) {
