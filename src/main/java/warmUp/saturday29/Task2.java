@@ -3,20 +3,27 @@ package warmUp.saturday29;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Task2 {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>();
-        for(int i=0;i<25;i++){
-            list.add((int)(Math.random()*20)-10);
+        for (int i = 0; i < 25; i++) {
+            list.add((int) (Math.random() * 20) - 10);
         }
-        list.forEach(s-> System.out.println(s));
+        List<Integer> list2 = Stream.generate(() -> (int) (Math.random() * 20) - 10).limit(20).collect(Collectors.toList());
 
-        List<Integer> neg = list.stream().filter(x-> (x<0)).collect(Collectors.toList());
-        neg.forEach(s-> System.out.println(s));
-        List<Integer> squareRoots = list.stream().filter(x -> x > 0).map(x -> (int)Math.sqrt(x)).collect(Collectors.toList());
-        squareRoots.forEach(s-> System.out.println(s));
 
+        System.out.println("first list " + list.toString());
+
+
+        List<Integer> neg = list2.stream().filter(x -> (x < 0)).collect(Collectors.toList());
+
+        System.out.println("neg " + neg.toString());
+        List<Integer> squareRoots = list2.stream().filter(x -> (x > 0)).map(x -> (int) Math.sqrt(x)).collect(Collectors.toList());
+
+
+        System.out.println("roots " + squareRoots.toString());
 
     }
 }
