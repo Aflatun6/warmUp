@@ -11,7 +11,7 @@ public class Main {
         System.out.println(Arrays.toString(ints));
         Map<Integer, Integer> ohh = new HashMap<>();
 
-        for(int i:ints){
+        for (int i : ints) {
             if (!ohh.containsKey(i)) {
                 ohh.put(i, 1);
             } else {
@@ -23,5 +23,7 @@ public class Main {
         for (Integer a : ohh.keySet()) {
             System.out.println(a + " is appeared " + ohh.get(a));
         }
+
+        int min = 50;
     }
 }
