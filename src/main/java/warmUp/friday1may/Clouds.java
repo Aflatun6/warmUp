@@ -4,17 +4,17 @@ public class Clouds {
     static int jumpingOnClouds(int[] c) {
         int count = 0;
         int curr = 0;
-        while (curr < c.length - 2) {
-            if (curr + 2 < c.length) {
-                if (c[curr + 2] == 0) {
-                    curr += 2;
-                    count++;
-                }
-            } else if (curr + 1 < c.length) {
-                if (c[curr + 1] == 0) {
-                    curr++;
-                    count++;
-                }
+        while (curr < c.length - 1) {
+            if (curr + 2 < c.length && c[curr + 2] == 0) {
+
+                curr += 2;
+                count++;
+
+            } else if (curr + 1 < c.length && c[curr + 1] == 0) {
+
+                curr++;
+                count++;
+
             }
 
         }
