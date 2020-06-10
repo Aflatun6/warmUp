@@ -23,7 +23,7 @@ public class SpecialString2 {
     }
 
     public static void main(String[] args) {
-        System.out.println(substrCount(7, "aaaqdgdfdffd"));
+        System.out.println(substrCount(7, "aaabaaa"));
     }
 
     static long substrCount(int n, String s) {
@@ -47,10 +47,8 @@ public class SpecialString2 {
             if (i == list.size() - 1)
                 pairs.add(new Pair(temp, count));
         }
-        pairs.forEach(System.out::println);
         return check(pairs);
     }
-
 
     private static int check(List<Pair> pairs) {
         int n = 0;
