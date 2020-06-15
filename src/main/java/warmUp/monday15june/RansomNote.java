@@ -11,8 +11,6 @@ public class RansomNote {
 
     static void checkMagazine(String[] magazine, String[] note) {
 
-        boolean b = Arrays.stream(magazine).collect(Collectors.toList()).containsAll(Arrays.stream(note).collect(Collectors.toList()));
-
 //        Arrays.stream(magazine).flatMap(m->{
 //            Arrays.stream(note).map(n -> {
 //                if(n.equals(m)) break;
@@ -21,8 +19,6 @@ public class RansomNote {
         int c = 0;
         for (String m : magazine) {
             for (String n : note) {
-                System.out.println(m);
-                System.out.println(n);
                 if (n.equals(m)) {
                     c++;
                     break;
