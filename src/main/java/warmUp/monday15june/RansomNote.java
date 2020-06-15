@@ -1,6 +1,7 @@
 package warmUp.monday15june;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class RansomNote {
@@ -16,11 +17,14 @@ public class RansomNote {
 //                if(n.equals(m)) break;
 //            })
 //        })
+        List<String> mq = Arrays.stream(magazine).collect(Collectors.toList());
+        List<String> nt = Arrays.stream(note).collect(Collectors.toList());
         int c = 0;
-        for (String m : magazine) {
-            for (String n : note) {
+        for (String m : mq) {
+            for (String n : nt) {
                 if (n.equals(m)) {
                     c++;
+                    nt.remove(n);
                     break;
                 }
             }
